@@ -1,11 +1,9 @@
 #include "shell.h"
 
 /**
- * _puts - function to print srings to standard output
- *
- * @str: the string to be printed
- *
- * Return: number of characters to be printed
+ * _puts - function to print srings to stdout
+ * @str: string that is printed
+ * Return: returns the no characters to be printed
  */
 
 int _puts(const char *str)

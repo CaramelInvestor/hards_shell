@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * _exec - Executes the program with an array of token given.
- * @args: List of tokens to be read and executed.
+ * _exec - function that executes the program using an array of token
+ * @args: Tokens list to be read and executed.
  */
 
 void _exec(char **args)

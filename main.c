@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * main - entry point of the shell program
- * Return: 0 on success
+ * main - entry point of my shell program
+ * Return: returns 0 on success
  */
 int main(void)
 {
