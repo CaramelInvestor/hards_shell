@@ -24,5 +24,5 @@ int _printf(const char *format, ...);
 int _puts(const char *str);
 void _printfs(const char *format, ...);
 int my_strcmp(const char *str1, const char *str2);
-
+void _execme(char **args);
 #endif /*SHELL_H_*/

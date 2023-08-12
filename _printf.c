@@ -1,4 +1,6 @@
 #include "shell.h"
+
+void _printfs(const char *format, ...);
 /**
  * _printfs - function to print strings
  *@format: character pointer
@@ -6,6 +8,7 @@
 void _printfs(const char *format, ...)
 {
 	va_list args;
+
 	va_start(args, format);
 
 	while (*format != '\0') /*as long as the characters are not null byte*/
@@ -13,16 +16,19 @@ void _printfs(const char *format, ...)
 		if (*format == '%') /*note when the program encounters a "%"*/
 		{
 			format++; /*Move past '%'*/
+
 			if (*format == 'c')
 			{
 				/*print a character*/
 				int c = va_arg(args, int);
+
 				_putchar(c);
 			}
 			else if (*format == 's')
 			{
 				/*print a string*/
 				char *s = va_arg(args, char *);
+
 				while (*s != '\0')
 				{
 					_putchar(*s);

@@ -25,8 +25,8 @@ int main(void)
 			/* Check for the exit built-in command */
 			if (my_strcmp(tokens[0], "exit") == 0)
 			{
-				free(tokens);
-				free(line);
+				if (tokens != NULL)
+					free(tokens);
 				break;
 			}
 
@@ -36,13 +36,12 @@ int main(void)
 				print_env();
 				continue;
 			}
-			_exec(tokens);
+			_execme(tokens);
 			free(tokens);
 		}
 
-
 	}
 	if (line != NULL)
-	free(line);
+		free(line);
 	return (0);
 }
