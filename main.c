@@ -1,5 +1,6 @@
 #include "shell.h"
 
+int def_valid_command(const char *command);
 /**
  * main - entry point of my shell program
  * Return: returns 0 on success
@@ -61,7 +62,14 @@ int main(void)
 				}
 				continue;
 			}
-			_execme(tokens);
+			/* Check for other allowed commands */
+			if (def_valid_command(tokens[0])) {
+				/* Execute the command */
+				_execme(tokens);
+			} else {
+				/* Display an error message for invalid command */
+				def_fprintf(stderr, "Invalid command: %s\n", tokens[0]);
+			}
 			free(tokens);
 		}
 

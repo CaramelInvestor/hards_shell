@@ -33,4 +33,5 @@ int def_unsetenv(const char *variable);
 int def_fputs(const char *str, FILE *stream);
 void list_files();
 void def_current_dir();
+int is_valid_command(const char *command);
 #endif /*SHELL_H_*/
