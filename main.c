@@ -29,6 +29,10 @@ int main(void)
 					free(tokens);
 				break;
 			}
+			if (my_strcmp(tokens[0], "pwd") == 0) {
+				def_current_dir();
+				continue;
+			}
 
 			/* Check for the env built-in command */
 			if (my_strcmp(tokens[0], "env") == 0)

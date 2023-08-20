@@ -12,6 +12,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <stdarg.h>
+#include <dirent.h>
 
 extern char **environ;
 
@@ -30,4 +31,6 @@ int def_vsnprintf(char *buffer, size_t buf_size, const char *format, va_list arg
 int def_setenv(const char *variable, const char *value);
 int def_unsetenv(const char *variable);
 int def_fputs(const char *str, FILE *stream);
+void list_files();
+void def_current_dir();
 #endif /*SHELL_H_*/
